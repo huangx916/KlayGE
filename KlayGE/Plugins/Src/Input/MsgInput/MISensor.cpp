@@ -316,7 +316,7 @@ namespace KlayGE
 			if (SUCCEEDED(hr))
 			{
 				IID REPORT_TYPES[] = { IID_ILatLongReport };
-				hr = location->RequestPermissions(nullptr, REPORT_TYPES, std::size(REPORT_TYPES), true);
+				hr = location->RequestPermissions(nullptr, REPORT_TYPES, (ULONG)(std::size(REPORT_TYPES)), true);
 				if (SUCCEEDED(hr))
 				{
 					locator_ = MakeCOMPtr(location);
